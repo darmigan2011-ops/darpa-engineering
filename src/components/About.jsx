@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
 
 const milestones = [
-  { year: '1998', event: 'Founded with a vision to revolutionize precision manufacturing' },
-  { year: '2004', event: 'Expanded into aluminium casting capabilities' },
-  { year: '2010', event: 'ISO 9001:2008 certification achieved' },
-  { year: '2015', event: 'Opened second manufacturing facility' },
-  { year: '2020', event: 'Industry 4.0 implementation across all plants' },
-  { year: '2024', event: 'Global expansion serving 25+ countries' },
+  { year: '2011', event: 'DARPA Engineering founded in Hosur, Tamil Nadu, India' },
+  { year: '2015', event: 'ISO 9001:2008 certification achieved' },
+  { year: '2018', event: 'Expanded into non-ferrous castings with new furnace capacity' },
+  { year: '2020', event: 'Crossed 80% export to USA & Germany markets' },
+  { year: '2023', event: 'Upgraded to ISO 9001:2015 certification with Six Sigma processes' },
+  { year: '2024', event: 'Global expansion with 15+ machines and 100+ international clients' },
 ]
 
 export default function About() {
@@ -30,14 +30,14 @@ export default function About() {
               fontFamily: "'Inter', sans-serif",
               fontSize: 13,
               fontWeight: 600,
-              color: '#007BFF',
+              color: '#08A9E8',
               letterSpacing: 4,
               textTransform: 'uppercase',
               display: 'inline-block',
               padding: '6px 16px',
               borderRadius: 100,
-              border: '1px solid rgba(0,123,255,0.2)',
-              background: 'rgba(0,123,255,0.06)',
+              border: '1px solid rgba(8,169,232,0.2)',
+              background: 'rgba(8,169,232,0.06)',
               marginBottom: 16,
             }}>
               About DARPA
@@ -51,10 +51,11 @@ export default function About() {
               marginBottom: 20,
               lineHeight: 1.15,
             }}>
-              A Legacy of{' '}
-              <span style={{ background: 'linear-gradient(135deg, #007BFF, #005FCC)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Manufacturing Excellence
-              </span>
+              True{' '}
+              <span style={{ background: 'linear-gradient(135deg, #08A9E8, #1A3A8A)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                Engineering
+              </span>{' '}
+              Company
             </h2>
             <p style={{
               fontFamily: "'Inter', sans-serif",
@@ -63,7 +64,7 @@ export default function About() {
               lineHeight: 1.8,
               marginBottom: 16,
             }}>
-              With over 25 years of experience, DARPA Engineering has established itself as a trusted partner in precision manufacturing. We combine traditional craftsmanship with modern technology to deliver components that exceed industry standards.
+              Started in 2011, DARPA Engineering is one of the leading manufacturers and exporters of Sheet Metal Stampings, Non-Ferrous Castings (Aluminium, Copper, Brass and Bronze) from India. We export more than 80% of our products to USA and Germany.
             </p>
             <p style={{
               fontFamily: "'Inter', sans-serif",
@@ -72,20 +73,20 @@ export default function About() {
               lineHeight: 1.8,
               marginBottom: 32,
             }}>
-              Our state-of-the-art facility spans 150,000 sq ft and houses over 150 advanced machines, enabling us to handle projects of any scale with unwavering precision.
+              Located in SIPCOT Industrial Complex, Hosur, our facility houses 15+ advanced machines including power presses from 10 to 250 tons capacity, induction furnaces, and state-of-the-art tool room equipment to serve clients across Power T&D, Automotive and General Engineering sectors.
             </p>
             <div style={{ display: 'flex', gap: 40 }}>
               <div>
-                <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 36, fontWeight: 700, color: '#007BFF' }}>25+</p>
+                <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 36, fontWeight: 700, color: '#08A9E8' }}>14+</p>
                 <p style={{ fontSize: 14, color: '#6B7280' }}>Years of Excellence</p>
               </div>
               <div>
-                <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 36, fontWeight: 700, color: '#007BFF' }}>150K</p>
-                <p style={{ fontSize: 14, color: '#6B7280' }}>Sq Ft Facility</p>
+                <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 36, fontWeight: 700, color: '#08A9E8' }}>$3M</p>
+                <p style={{ fontSize: 14, color: '#6B7280' }}>Annual Turnover</p>
               </div>
               <div>
-                <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 36, fontWeight: 700, color: '#007BFF' }}>500+</p>
-                <p style={{ fontSize: 14, color: '#6B7280' }}>Happy Clients</p>
+                <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 36, fontWeight: 700, color: '#08A9E8' }}>80%</p>
+                <p style={{ fontSize: 14, color: '#6B7280' }}>Export to USA & EU</p>
               </div>
             </div>
           </motion.div>
@@ -99,36 +100,26 @@ export default function About() {
               position: 'relative',
               borderRadius: 24,
               overflow: 'hidden',
-              background: 'linear-gradient(135deg, #0B1727, #0D2C54)',
+              background: '#0B1727',
               aspectRatio: '4/5',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              border: '1px solid rgba(0,123,255,0.1)',
+              border: '1px solid rgba(8,169,232,0.1)',
             }}
           >
-            <svg viewBox="0 0 400 500" style={{ width: '70%' }}>
-              <defs>
-                <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#007BFF" stopOpacity="0.2" />
-                  <stop offset="100%" stopColor="#005FCC" stopOpacity="0.05" />
-                </linearGradient>
-              </defs>
-              <rect x="40" y="40" width="320" height="40" rx="8" fill="rgba(0,123,255,0.08)" />
-              <rect x="40" y="100" width="140" height="140" rx="16" fill="url(#aboutGrad)" stroke="rgba(0,123,255,0.15)" strokeWidth="1" />
-              <rect x="200" y="100" width="160" height="60" rx="10" fill="rgba(0,123,255,0.06)" />
-              <rect x="200" y="180" width="160" height="60" rx="10" fill="rgba(0,123,255,0.06)" />
-              <rect x="40" y="270" width="320" height="8" rx="4" fill="rgba(0,123,255,0.08)" />
-              <rect x="40" y="300" width="100" height="100" rx="12" fill="rgba(0,123,255,0.08)" />
-              <rect x="160" y="300" width="200" height="45" rx="8" fill="rgba(0,123,255,0.06)" />
-              <rect x="160" y="360" width="200" height="45" rx="8" fill="rgba(0,123,255,0.04)" />
-              {/* Factory silhouette */}
-              <rect x="60" y="430" width="30" height="50" rx="2" fill="rgba(0,123,255,0.15)" />
-              <rect x="100" y="410" width="30" height="70" rx="2" fill="rgba(0,123,255,0.1)" />
-              <rect x="140" y="400" width="30" height="80" rx="2" fill="rgba(0,123,255,0.15)" />
-              <rect x="180" y="420" width="30" height="60" rx="2" fill="rgba(0,123,255,0.1)" />
-              <rect x="60" y="435" width="150" height="3" fill="rgba(0,123,255,0.2)" />
-            </svg>
+            <img
+              src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+              alt="DARPA Engineering facility"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                opacity: 0.7,
+              }}
+            />
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(135deg, rgba(8,169,232,0.1), transparent)',
+            }} />
           </motion.div>
         </div>
 
@@ -162,7 +153,7 @@ export default function About() {
             left: '50%',
             transform: 'translateX(-50%)',
             width: 2,
-            background: 'linear-gradient(180deg, #007BFF, rgba(0,123,255,0.1))',
+            background: 'linear-gradient(180deg, #08A9E8, rgba(8,169,232,0.1))',
           }} />
 
           {milestones.map((item, i) => (
@@ -191,7 +182,7 @@ export default function About() {
                   fontFamily: "'Poppins', sans-serif",
                   fontSize: 18,
                   fontWeight: 700,
-                  color: '#007BFF',
+                  color: '#08A9E8',
                   display: 'block',
                   marginBottom: 4,
                 }}>{item.year}</span>
@@ -206,9 +197,9 @@ export default function About() {
                 width: 14,
                 height: 14,
                 borderRadius: '50%',
-                background: '#007BFF',
+                background: '#08A9E8',
                 border: '3px solid #F8FAFC',
-                boxShadow: '0 0 0 3px rgba(0,123,255,0.2)',
+                boxShadow: '0 0 0 3px rgba(8,169,232,0.2)',
                 zIndex: 1,
               }} />
             </motion.div>

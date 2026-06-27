@@ -36,14 +36,14 @@ export default function Articles() {
             fontFamily: "'Inter', sans-serif",
             fontSize: 13,
             fontWeight: 600,
-            color: '#007BFF',
+            color: '#08A9E8',
             letterSpacing: 4,
             textTransform: 'uppercase',
             display: 'inline-block',
             padding: '6px 16px',
             borderRadius: 100,
-            border: '1px solid rgba(0,123,255,0.2)',
-            background: 'rgba(0,123,255,0.06)',
+            border: '1px solid rgba(8,169,232,0.2)',
+            background: 'rgba(8,169,232,0.06)',
             marginBottom: 16,
           }}>
             Knowledge Hub
@@ -92,8 +92,8 @@ export default function Articles() {
                 transition: 'all 0.4s',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,123,255,0.08)'
-                e.currentTarget.style.borderColor = 'rgba(0,123,255,0.1)'
+                e.currentTarget.style.boxShadow = '0 20px 60px rgba(8,169,232,0.08)'
+                e.currentTarget.style.borderColor = 'rgba(8,169,232,0.1)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.02)'
@@ -102,19 +102,31 @@ export default function Articles() {
             >
               <div style={{
                 height: 200,
-                background: `linear-gradient(135deg, rgba(0,123,255,${0.1 - i * 0.02}), rgba(0,95,204,${0.05 + i * 0.02}))`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                overflow: 'hidden',
+                position: 'relative',
+                background: '#0B1727',
               }}>
-                <span style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: 32,
-                  fontWeight: 700,
-                  color: 'rgba(0,123,255,0.3)',
-                }}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
+                <img
+                  src={
+                    i === 0
+                      ? 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80'
+                      : i === 1
+                      ? 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80'
+                      : 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80'
+                  }
+                  alt=""
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: 0.8,
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'linear-gradient(135deg, rgba(8,169,232,0.1), transparent)',
+                }} />
               </div>
               <div style={{ padding: 28 }}>
                 <div style={{
@@ -126,7 +138,7 @@ export default function Articles() {
                   <span style={{
                     fontSize: 11,
                     fontWeight: 600,
-                    color: '#007BFF',
+                    color: '#08A9E8',
                     textTransform: 'uppercase',
                     letterSpacing: 1,
                   }}>
@@ -158,7 +170,7 @@ export default function Articles() {
                   style={{
                     fontSize: 13,
                     fontWeight: 600,
-                    color: '#007BFF',
+                    color: '#08A9E8',
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 4,

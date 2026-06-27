@@ -29,7 +29,7 @@ export default function App() {
         left: 0;
         width: 0%;
         height: 1.5px;
-        background: #007BFF;
+        background: #08A9E8;
         transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
       a:hover .nav-underline { width: 100%; }

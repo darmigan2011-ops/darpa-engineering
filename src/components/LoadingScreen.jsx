@@ -34,7 +34,7 @@ export default function LoadingScreen() {
               fontFamily: "'Poppins', sans-serif",
               fontSize: 42,
               fontWeight: 800,
-              background: 'linear-gradient(135deg, #007BFF, #60A5FA)',
+              background: 'linear-gradient(135deg, #08A9E8, #4FC3F7)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               letterSpacing: -1,
@@ -64,7 +64,7 @@ export default function LoadingScreen() {
             style={{
               width: 160,
               height: 2,
-              background: 'linear-gradient(90deg, #007BFF, #60A5FA)',
+              background: 'linear-gradient(90deg, #08A9E8, #4FC3F7)',
               borderRadius: 1,
               marginTop: 32,
               transformOrigin: 'left',

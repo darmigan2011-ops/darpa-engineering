@@ -5,8 +5,8 @@ const steps = [
   { label: 'Tooling', icon: '⚙' },
   { label: 'Stamping', icon: '⬡' },
   { label: 'Casting', icon: '◈' },
+  { label: 'Machining', icon: '⛭' },
   { label: 'Inspection', icon: '◎' },
-  { label: 'Packaging', icon: '▣' },
   { label: 'Delivery', icon: '→' },
 ]
 
@@ -25,14 +25,14 @@ export default function Process() {
             fontFamily: "'Inter', sans-serif",
             fontSize: 13,
             fontWeight: 600,
-            color: '#007BFF',
+            color: '#08A9E8',
             letterSpacing: 4,
             textTransform: 'uppercase',
             display: 'inline-block',
             padding: '6px 16px',
             borderRadius: 100,
-            border: '1px solid rgba(0,123,255,0.2)',
-            background: 'rgba(0,123,255,0.06)',
+            border: '1px solid rgba(8,169,232,0.2)',
+            background: 'rgba(8,169,232,0.06)',
             marginBottom: 16,
           }}>
             Manufacturing Process
@@ -73,7 +73,7 @@ export default function Process() {
             left: '5%',
             right: '5%',
             height: 2,
-            background: 'linear-gradient(90deg, #007BFF, rgba(0,123,255,0.1))',
+            background: 'linear-gradient(90deg, #08A9E8, rgba(8,169,232,0.1))',
             transform: 'translateY(-50%)',
             zIndex: 0,
           }} />
@@ -96,18 +96,18 @@ export default function Process() {
               }}
             >
               <motion.div
-                whileHover={{ scale: 1.15, boxShadow: '0 8px 30px rgba(0,123,255,0.3)' }}
+                whileHover={{ scale: 1.15, boxShadow: '0 8px 30px rgba(8,169,232,0.3)' }}
                 style={{
                   width: 56,
                   height: 56,
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #007BFF, #005FCC)',
+                  background: 'linear-gradient(135deg, #08A9E8, #1A3A8A)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: '#fff',
                   fontSize: 20,
-                  boxShadow: '0 4px 15px rgba(0,123,255,0.2)',
+                  boxShadow: '0 4px 15px rgba(8,169,232,0.2)',
                 }}
               >
                 {step.icon}

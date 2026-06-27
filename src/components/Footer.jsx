@@ -7,15 +7,15 @@ const columns = [
   },
   {
     title: 'Services',
-    links: ['Stampings', 'Castings', 'Tool Room', 'Machining', 'Engineering'],
+    links: ['Stampings', 'Castings', 'Tool Room', 'Welding', 'Engineering'],
   },
   {
     title: 'Industries',
-    links: ['Automotive', 'Industrial', 'Heavy Engineering', 'Renewable Energy', 'OEM'],
+    links: ['Power T&D', 'Automotive', 'General Engineering', 'Electrical', 'OEM'],
   },
   {
     title: 'Quick Links',
-    links: ['Quality Policy', 'Privacy Policy', 'Terms of Service', 'Sitemap', 'Contact'],
+    links: ['Quality Policy', 'ISO 9001:2015', 'Privacy Policy', 'Sitemap', 'Contact'],
   },
 ]
 
@@ -49,11 +49,21 @@ export default function Footer() {
               display: 'flex',
               alignItems: 'center',
               gap: 8,
-              marginBottom: 16,
+              marginBottom: 8,
             }}>
               DARPA
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#007BFF', display: 'inline-block' }} />
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#08A9E8', display: 'inline-block' }} />
             </div>
+            <p style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 12,
+              color: 'rgba(255,255,255,0.3)',
+              fontStyle: 'italic',
+              marginBottom: 16,
+              letterSpacing: 1,
+            }}>
+              True Engineering
+            </p>
             <p style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 14,
@@ -62,7 +72,7 @@ export default function Footer() {
               marginBottom: 24,
               maxWidth: 300,
             }}>
-              Precision manufacturing excellence since 1998. Trusted by global leaders for sheet metal stampings, aluminium castings and tooling solutions.
+              Started in 2011, DARPA Engineering is a leading manufacturer and exporter of sheet metal stampings, non-ferrous castings and tooling solutions from India.
             </p>
             {/* Newsletter */}
             <div style={{ display: 'flex', gap: 8 }}>
@@ -90,7 +100,7 @@ export default function Footer() {
                   fontSize: 13,
                   fontWeight: 600,
                   color: '#fff',
-                  background: 'linear-gradient(135deg, #007BFF, #005FCC)',
+                  background: 'linear-gradient(135deg, #08A9E8, #1A3A8A)',
                   border: 'none',
                   borderRadius: 100,
                   padding: '10px 20px',
@@ -130,7 +140,7 @@ export default function Footer() {
                         transition: 'color 0.3s',
                         position: 'relative',
                       }}
-                      onMouseEnter={(e) => { e.target.style.color = '#007BFF' }}
+                      onMouseEnter={(e) => { e.target.style.color = '#08A9E8' }}
                       onMouseLeave={(e) => { e.target.style.color = 'rgba(255,255,255,0.5)' }}
                     >
                       {link}
@@ -180,7 +190,7 @@ export default function Footer() {
                   transition: 'all 0.3s',
                   cursor: 'pointer',
                 }}
-                onMouseEnter={(e) => { e.target.style.background = '#007BFF'; e.target.style.color = '#fff' }}
+                onMouseEnter={(e) => { e.target.style.background = '#08A9E8'; e.target.style.color = '#fff' }}
                 onMouseLeave={(e) => { e.target.style.background = 'rgba(255,255,255,0.04)'; e.target.style.color = 'rgba(255,255,255,0.4)' }}
               >
                 {social.toUpperCase()}
@@ -196,17 +206,17 @@ export default function Footer() {
                 width: 40,
                 height: 40,
                 borderRadius: 12,
-                background: 'rgba(0,123,255,0.1)',
-                border: '1px solid rgba(0,123,255,0.15)',
+                background: 'rgba(8,169,232,0.1)',
+                border: '1px solid rgba(8,169,232,0.15)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 cursor: 'pointer',
-                color: '#007BFF',
+                color: '#08A9E8',
                 transition: 'all 0.3s',
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(0,123,255,0.2)' }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,123,255,0.1)' }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(8,169,232,0.2)' }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(8,169,232,0.1)' }}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="12" y1="19" x2="12" y2="5" /><polyline points="5 12 12 5 19 12" />

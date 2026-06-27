@@ -45,7 +45,7 @@ const styles = {
     width: 8,
     height: 8,
     borderRadius: '50%',
-    background: '#007BFF',
+    background: '#08A9E8',
     display: 'inline-block',
   },
   link: {
@@ -63,13 +63,13 @@ const styles = {
     fontSize: 14,
     fontWeight: 600,
     color: '#fff',
-    background: 'linear-gradient(135deg, #007BFF, #005FCC)',
+    background: 'linear-gradient(135deg, #08A9E8, #1A3A8A)',
     border: 'none',
     borderRadius: 100,
     padding: '10px 24px',
     cursor: 'pointer',
     transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-    boxShadow: '0 4px 20px rgba(0,123,255,0.25)',
+    boxShadow: '0 4px 20px rgba(8,169,232,0.25)',
   },
   menuBtn: {
     display: 'none',
@@ -126,8 +126,7 @@ export default function Navbar() {
       >
         <div style={styles.inner}>
           <a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo('#hero') }} style={styles.logo}>
-            DARPA
-            <span style={styles.logoDot} />
+            <img src="/logo.svg" alt="DARPA Engineering" style={{ height: 36 }} />
           </a>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
@@ -151,7 +150,7 @@ export default function Navbar() {
                     left: 0,
                     width: '0%',
                     height: 1.5,
-                    background: '#007BFF',
+                    background: '#08A9E8',
                     transition: 'width 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                   }}
                   className="nav-underline"
@@ -162,7 +161,7 @@ export default function Navbar() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: '0 6px 30px rgba(0,123,255,0.35)' }}
+              whileHover={{ scale: 1.05, boxShadow: '0 6px 30px rgba(8,169,232,0.35)' }}
               whileTap={{ scale: 0.97 }}
               style={styles.cta}
               onClick={() => scrollTo('#contact')}

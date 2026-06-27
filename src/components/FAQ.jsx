@@ -45,14 +45,14 @@ export default function FAQ() {
             fontFamily: "'Inter', sans-serif",
             fontSize: 13,
             fontWeight: 600,
-            color: '#007BFF',
+            color: '#08A9E8',
             letterSpacing: 4,
             textTransform: 'uppercase',
             display: 'inline-block',
             padding: '6px 16px',
             borderRadius: 100,
-            border: '1px solid rgba(0,123,255,0.2)',
-            background: 'rgba(0,123,255,0.06)',
+            border: '1px solid rgba(8,169,232,0.2)',
+            background: 'rgba(8,169,232,0.06)',
             marginBottom: 16,
           }}>
             FAQ
@@ -80,7 +80,7 @@ export default function FAQ() {
                 borderRadius: 16,
                 border: '1px solid rgba(0,0,0,0.06)',
                 overflow: 'hidden',
-                background: open === i ? 'rgba(0,123,255,0.02)' : '#fff',
+                background: open === i ? 'rgba(8,169,232,0.02)' : '#fff',
                 transition: 'all 0.3s',
               }}
             >
@@ -109,7 +109,7 @@ export default function FAQ() {
                   transition={{ duration: 0.2 }}
                   style={{
                     fontSize: 22,
-                    color: '#007BFF',
+                    color: '#08A9E8',
                     flexShrink: 0,
                     lineHeight: 1,
                   }}

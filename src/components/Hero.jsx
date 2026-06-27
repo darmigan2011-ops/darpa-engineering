@@ -26,8 +26,8 @@ export default function Hero() {
           position: 'absolute',
           inset: 0,
           backgroundImage: `
-            linear-gradient(rgba(0,123,255,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,123,255,0.03) 1px, transparent 1px)
+            linear-gradient(rgba(8,169,232,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(8,169,232,0.03) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
           maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 70%)',
@@ -44,7 +44,7 @@ export default function Hero() {
           width: 600,
           height: 600,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(0,123,255,0.08), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(8,169,232,0.08), transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -56,7 +56,7 @@ export default function Hero() {
           width: 500,
           height: 500,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(0,123,255,0.05), transparent 70%)',
+          background: 'radial-gradient(circle, rgba(8,169,232,0.05), transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -80,7 +80,7 @@ export default function Hero() {
             width: 3,
             height: 3,
             borderRadius: '50%',
-            background: '#007BFF',
+            background: '#08A9E8',
             top: `${10 + Math.random() * 80}%`,
             left: `${10 + Math.random() * 80}%`,
             opacity: 0.15,
@@ -110,18 +110,18 @@ export default function Hero() {
               fontFamily: "'Inter', sans-serif",
               fontSize: 13,
               fontWeight: 600,
-              color: '#007BFF',
+              color: '#08A9E8',
               letterSpacing: 4,
               textTransform: 'uppercase',
               display: 'inline-block',
               padding: '6px 16px',
               borderRadius: 100,
-              border: '1px solid rgba(0,123,255,0.2)',
-              background: 'rgba(0,123,255,0.06)',
+              border: '1px solid rgba(8,169,232,0.2)',
+              background: 'rgba(8,169,232,0.06)',
               marginBottom: 24,
             }}
           >
-            Precision Manufacturing Since 1998
+            True Engineering Since 2011
           </motion.span>
 
           <motion.h1
@@ -137,8 +137,8 @@ export default function Hero() {
             }}
             className="hero-title"
           >
-            Engineering Excellence That{' '}
-            <span style={{ background: 'linear-gradient(135deg, #007BFF, #60A5FA)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            True Engineering That{' '}
+            <span style={{ background: 'linear-gradient(135deg, #08A9E8, #4FC3F7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Powers Global
             </span>{' '}
             Manufacturing
@@ -155,7 +155,7 @@ export default function Hero() {
               marginBottom: 40,
             }}
           >
-            DARPA Engineering delivers precision sheet metal stampings, aluminium castings and tooling solutions trusted by leading industries worldwide.
+            Started in 2011, DARPA Engineering is a leading manufacturer and exporter of sheet metal stampings, non-ferrous castings (Aluminium, Copper, Brass, Bronze) and tooling solutions. ISO 9001:2015 certified, serving Power T&D, Automotive and General Engineering sectors worldwide.
           </motion.p>
 
           <motion.div
@@ -164,7 +164,7 @@ export default function Hero() {
           >
             <motion.a
               href="#services"
-              whileHover={{ scale: 1.05, boxShadow: '0 8px 40px rgba(0,123,255,0.4)' }}
+              whileHover={{ scale: 1.05, boxShadow: '0 8px 40px rgba(8,169,232,0.4)' }}
               whileTap={{ scale: 0.97 }}
               onClick={(e) => { e.preventDefault(); document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' }) }}
               style={{
@@ -172,12 +172,12 @@ export default function Hero() {
                 fontSize: 15,
                 fontWeight: 600,
                 color: '#fff',
-                background: 'linear-gradient(135deg, #007BFF, #005FCC)',
+                background: 'linear-gradient(135deg, #08A9E8, #1A3A8A)',
                 padding: '16px 36px',
                 borderRadius: 100,
                 border: 'none',
                 cursor: 'pointer',
-                boxShadow: '0 4px 20px rgba(0,123,255,0.25)',
+                boxShadow: '0 4px 20px rgba(8,169,232,0.25)',
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 8,
@@ -217,9 +217,9 @@ export default function Hero() {
             style={{ display: 'flex', gap: 40, marginTop: 56 }}
           >
             {[
-              { num: '25+', label: 'Years Experience' },
-              { num: '500+', label: 'Global Clients' },
-              { num: '150+', label: 'Advanced Machines' },
+              { num: '14+', label: 'Years Experience' },
+              { num: '100+', label: 'Global Clients' },
+              { num: '15+', label: 'Advanced Machines' },
             ].map((item) => (
               <div key={item.label}>
                 <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 28, fontWeight: 700, color: '#fff', lineHeight: 1 }}>
@@ -246,41 +246,26 @@ export default function Hero() {
               position: 'relative',
               borderRadius: 24,
               overflow: 'hidden',
-              background: 'linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,95,204,0.05))',
-              border: '1px solid rgba(0,123,255,0.1)',
+              background: '#0B1727',
+              border: '1px solid rgba(8,169,232,0.1)',
               aspectRatio: '4/5',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
             }}
           >
-            {/* Abstract industrial visual */}
-            <svg viewBox="0 0 400 500" style={{ width: '80%', height: '80%' }}>
-              <defs>
-                <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#007BFF" stopOpacity="0.3" />
-                  <stop offset="100%" stopColor="#005FCC" stopOpacity="0.1" />
-                </linearGradient>
-              </defs>
-              <rect x="40" y="30" width="320" height="30" rx="6" fill="rgba(0,123,255,0.15)" />
-              <rect x="40" y="80" width="200" height="200" rx="16" fill="url(#heroGrad)" stroke="rgba(0,123,255,0.2)" strokeWidth="1" />
-              <rect x="260" y="80" width="100" height="90" rx="10" fill="rgba(0,123,255,0.08)" stroke="rgba(0,123,255,0.15)" strokeWidth="1" />
-              <rect x="260" y="190" width="100" height="90" rx="10" fill="rgba(0,123,255,0.08)" stroke="rgba(0,123,255,0.15)" strokeWidth="1" />
-              <rect x="40" y="310" width="100" height="100" rx="12" fill="rgba(0,123,255,0.08)" stroke="rgba(0,123,255,0.15)" strokeWidth="1" />
-              <rect x="160" y="310" width="200" height="50" rx="8" fill="rgba(0,123,255,0.1)" />
-              <rect x="160" y="380" width="200" height="30" rx="6" fill="rgba(0,123,255,0.06)" />
-              {/* Gear icon */}
-              <circle cx="90" cy="360" r="30" fill="none" stroke="rgba(0,123,255,0.2)" strokeWidth="2" />
-              <circle cx="90" cy="360" r="12" fill="rgba(0,123,255,0.15)" />
-              {[0, 60, 120, 180, 240, 300].map((angle) => {
-                const rad = (angle * Math.PI) / 180
-                const x1 = 90 + 22 * Math.cos(rad)
-                const y1 = 360 + 22 * Math.sin(rad)
-                const x2 = 90 + 34 * Math.cos(rad)
-                const y2 = 360 + 34 * Math.sin(rad)
-                return <line key={angle} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(0,123,255,0.2)" strokeWidth="2" />
-              })}
-            </svg>
+            <img
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80"
+              alt="Industrial manufacturing"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                opacity: 0.7,
+              }}
+            />
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(135deg, rgba(8,169,232,0.15), transparent)',
+            }} />
           </div>
 
           {/* Glow ring */}
@@ -293,7 +278,7 @@ export default function Hero() {
               width: '110%',
               height: '110%',
               borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(0,123,255,0.06), transparent 70%)',
+              background: 'radial-gradient(circle, rgba(8,169,232,0.06), transparent 70%)',
               pointerEvents: 'none',
             }}
           />
@@ -322,7 +307,7 @@ export default function Hero() {
         <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5">
           <rect x="1.5" y="1.5" width="13" height="21" rx="6.5" />
           <motion.circle
-            cx="8" cy="8" r="2" fill="#007BFF"
+            cx="8" cy="8" r="2" fill="#08A9E8"
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           />

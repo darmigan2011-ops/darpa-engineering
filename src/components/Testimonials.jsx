@@ -34,8 +34,8 @@ export default function Testimonials() {
         position: 'absolute',
         inset: 0,
         backgroundImage: `
-          linear-gradient(rgba(0,123,255,0.02) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(0,123,255,0.02) 1px, transparent 1px)
+          linear-gradient(rgba(8,169,232,0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(8,169,232,0.02) 1px, transparent 1px)
         `,
         backgroundSize: '60px 60px',
       }} />
@@ -51,14 +51,14 @@ export default function Testimonials() {
             fontFamily: "'Inter', sans-serif",
             fontSize: 13,
             fontWeight: 600,
-            color: '#007BFF',
+            color: '#08A9E8',
             letterSpacing: 4,
             textTransform: 'uppercase',
             display: 'inline-block',
             padding: '6px 16px',
             borderRadius: 100,
-            border: '1px solid rgba(0,123,255,0.2)',
-            background: 'rgba(0,123,255,0.06)',
+            border: '1px solid rgba(8,169,232,0.2)',
+            background: 'rgba(8,169,232,0.06)',
             marginBottom: 16,
           }}>
             Testimonials
@@ -108,7 +108,7 @@ export default function Testimonials() {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = 'rgba(255,255,255,0.07)'
-                e.currentTarget.style.borderColor = 'rgba(0,123,255,0.2)'
+                e.currentTarget.style.borderColor = 'rgba(8,169,232,0.2)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = 'rgba(255,255,255,0.04)'
@@ -118,7 +118,7 @@ export default function Testimonials() {
               {/* Stars */}
               <div style={{ display: 'flex', gap: 4, marginBottom: 16 }}>
                 {[...Array(5)].map((_, s) => (
-                  <span key={s} style={{ color: s < item.rating ? '#007BFF' : 'rgba(255,255,255,0.1)', fontSize: 16 }}>
+                  <span key={s} style={{ color: s < item.rating ? '#08A9E8' : 'rgba(255,255,255,0.1)', fontSize: 16 }}>
                     ★
                   </span>
                 ))}

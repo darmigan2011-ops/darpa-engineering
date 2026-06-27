@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <defs>
+    <style>
+      .d-text { fill: #08A9E8; font-family: Arial Black, 'Poppins', sans-serif; font-weight: 900; }
+      .e-text { fill: #24117A; font-family: Arial Narrow, 'Impact', sans-serif; font-weight: 800; letter-spacing: 4px; }
+      .tagline { fill: #24117A; font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 13px; }
+      .stripe { fill: #24117A; }
+    </style>
+  </defs>
+
+  <!-- DARPA Wordmark -->
+  <!-- Letter D: squared outer, rounded inner corners -->
+  <path d="M10 20 H42 Q50 20 50 28 V92 Q50 100 42 100 H10 V20 Z" fill="none" stroke="#08A9E8" stroke-width="7" stroke-linejoin="round" rx="4"/>
+  <rect x="14" y="24" width="32" height="72" rx="4" fill="#08A9E8" opacity="0.9"/>
+  <path d="M46 28 Q52 35 52 48 V72 Q52 85 46 92" fill="none" stroke="#08A9E8" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Letter A: custom inverted V without crossbar -->
+  <path d="M68 100 L82 20 L96 100" fill="none" stroke="#08A9E8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="75" y1="72" x2="89" y2="72" stroke="#08A9E8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Letter R -->
+  <path d="M106 20 V100" fill="none" stroke="#08A9E8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M106 20 H132 Q146 20 146 36 Q146 52 132 52 H106" fill="none" stroke="#08A9E8" stroke-width="7" stroke-linejoin="round"/>
+  <line x1="128" y1="52" x2="146" y2="100" stroke="#08A9E8" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Letter P -->
+  <path d="M156 20 V100" fill="none" stroke="#08A9E8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M156 20 H180 Q194 20 194 36 Q194 52 180 52 H156" fill="none" stroke="#08A9E8" stroke-width="7" stroke-linejoin="round"/>
+
+  <!-- Letter A (second): inverted V without crossbar -->
+  <path d="M205 100 L218 20 L231 100" fill="none" stroke="#08A9E8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="212" y1="72" x2="225" y2="72" stroke="#08A9E8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- ENGINEERING -->
+  <!-- E (3 bars) -->
+  <path d="M10 118 H44" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M10 130 H44" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M10 142 H44" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="10" y1="112" x2="10" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- N -->
+  <line x1="52" y1="112" x2="52" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="52" y1="112" x2="76" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="76" y1="112" x2="76" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- G -->
+  <path d="M84 118 H100 V140 H84 V130 H92" fill="none" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- I -->
+  <line x1="108" y1="112" x2="108" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- N (2) -->
+  <line x1="116" y1="112" x2="116" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="116" y1="112" x2="140" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="140" y1="112" x2="140" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- E (2 - 3 bars) -->
+  <path d="M148 118 H182" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M148 130 H182" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M148 142 H182" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="148" y1="112" x2="148" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- E (3 - 3 bars) -->
+  <path d="M190 118 H224" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M190 130 H224" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M190 142 H224" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="190" y1="112" x2="190" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- R -->
+  <line x1="232" y1="112" x2="232" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M232 112 H250 Q260 112 260 122 Q260 132 250 132 H232" fill="none" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="252" y1="132" x2="262" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- I (2) -->
+  <line x1="270" y1="112" x2="270" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- N (3) -->
+  <line x1="278" y1="112" x2="278" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="278" y1="112" x2="302" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="302" y1="112" x2="302" y2="148" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- G (2) -->
+  <path d="M310 118 H326 V140 H310 V130 H318" fill="none" stroke="#24117A" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Tagline: diagonal stripes + True Engineering + diagonal stripes -->
+  <g transform="translate(10, 170)">
+    <!-- Left stripes -->
+    <line x1="0" y1="10" x2="10" y2="0" stroke="#24117A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="6" y1="10" x2="16" y2="0" stroke="#24117A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="12" y1="10" x2="22" y2="0" stroke="#24117A" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Text -->
+    <text x="135" y="9" text-anchor="middle" class="tagline">True Engineering</text>
+    <!-- Right stripes -->
+    <line x1="248" y1="10" x2="258" y2="0" stroke="#24117A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="254" y1="10" x2="264" y2="0" stroke="#24117A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="260" y1="10" x2="270" y2="0" stroke="#24117A" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

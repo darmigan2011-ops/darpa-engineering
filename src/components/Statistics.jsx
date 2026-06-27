@@ -40,9 +40,9 @@ function Counter({ target, suffix = '', decimals = 0 }) {
 }
 
 const stats = [
-  { num: 25, suffix: '+', label: 'Years of Experience', decimals: 0 },
-  { num: 500, suffix: '+', label: 'Global Clients', decimals: 0 },
-  { num: 150, suffix: '+', label: 'Advanced Machines', decimals: 0 },
+  { num: 14, suffix: '+', label: 'Years of Experience', decimals: 0 },
+  { num: 100, suffix: '+', label: 'Global Clients', decimals: 0 },
+  { num: 15, suffix: '+', label: 'Advanced Machines', decimals: 0 },
   { num: 100, suffix: '%', label: 'Quality Focus', decimals: 0 },
 ]
 
@@ -58,8 +58,8 @@ export default function Statistics() {
         position: 'absolute',
         inset: 0,
         backgroundImage: `
-          linear-gradient(rgba(0,123,255,0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(0,123,255,0.03) 1px, transparent 1px)
+          linear-gradient(rgba(8,169,232,0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(8,169,232,0.03) 1px, transparent 1px)
         `,
         backgroundSize: '40px 40px',
       }} />
@@ -82,7 +82,7 @@ export default function Statistics() {
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: 52,
                 fontWeight: 800,
-                background: 'linear-gradient(135deg, #007BFF, #60A5FA)',
+                background: 'linear-gradient(135deg, #08A9E8, #4FC3F7)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 lineHeight: 1,

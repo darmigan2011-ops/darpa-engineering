@@ -3,54 +3,54 @@ import { motion } from 'framer-motion'
 const services = [
   {
     title: 'Sheet Metal Stampings',
-    desc: 'High-precision stampings for automotive, industrial and engineering applications with tight tolerances and consistent quality.',
+    desc: 'In-house power presses ranging from 10 to 250 tons capacity. We handle CR Steel, HR Steel, HSLA, Stainless Steel, Copper, Brass, Bronze and Aluminium with precision tooling.',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007BFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#08A9E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="8" rx="2" /><rect x="2" y="14" width="20" height="8" rx="2" />
       </svg>
     ),
   },
   {
-    title: 'Aluminium Castings',
-    desc: 'Premium aluminium casting solutions using advanced processes for lightweight, durable components across industries.',
+    title: 'Non-Ferrous Castings',
+    desc: 'Premium aluminium, copper, brass and bronze castings using gravity die casting. Induction furnace (200kg/hr) and electric furnace (180kg) for parts from 20g to 5kg.',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007BFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#08A9E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
       </svg>
     ),
   },
   {
     title: 'Tool Room Solutions',
-    desc: 'Comprehensive tool design, development and maintenance services with state-of-the-art CNC and EDM capabilities.',
+    desc: 'Complete in-house tool design and manufacturing with Hass VMC, Wire Cut EDM (Rijun-SR600), Spark Erosion, Surface Grinding and Milling Machines for precision tooling.',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007BFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#08A9E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" /><path d="M12 6v12" /><path d="M6 12h12" />
       </svg>
     ),
   },
   {
-    title: 'Precision Machining',
-    desc: 'High-accuracy CNC machining services for complex components with surface finishing and quality assurance.',
+    title: 'Robotic Welding',
+    desc: 'Automated welding solutions with Panasonic robotic welding machines. Specialized welding programs for complicated parts requiring proper weld penetration and torque performance.',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007BFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#08A9E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="3" /><path d="M12 1v4" /><path d="M12 19v4" /><path d="M1 12h4" /><path d="M19 12h4" />
       </svg>
     ),
   },
   {
-    title: 'Manufacturing Support',
-    desc: 'End-to-end manufacturing support including production planning, supply chain management and logistics coordination.',
+    title: 'Design & Engineering',
+    desc: 'In-house design team using SolidWorks and AutoCAD for developing complicated stampings, castings and tooling. Six Sigma principles for product development and manufacturing.',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007BFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#08A9E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" />
       </svg>
     ),
   },
   {
-    title: 'Engineering Support',
-    desc: 'Design engineering, prototyping, FEA analysis and process optimization services for improved manufacturing efficiency.',
+    title: 'Export & Logistics',
+    desc: '80% of products exported to USA and Germany. Cost-effective solutions in stampings, castings, tooling and warehousing for international clients with reliable on-time delivery.',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007BFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#08A9E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
       </svg>
     ),
@@ -77,14 +77,14 @@ export default function Services() {
             fontFamily: "'Inter', sans-serif",
             fontSize: 13,
             fontWeight: 600,
-            color: '#007BFF',
+            color: '#08A9E8',
             letterSpacing: 4,
             textTransform: 'uppercase',
             display: 'inline-block',
             padding: '6px 16px',
             borderRadius: 100,
-            border: '1px solid rgba(0,123,255,0.2)',
-            background: 'rgba(0,123,255,0.06)',
+            border: '1px solid rgba(8,169,232,0.2)',
+            background: 'rgba(8,169,232,0.06)',
             marginBottom: 16,
           }}>
             Our Capabilities
@@ -135,8 +135,8 @@ export default function Services() {
                 cursor: 'default',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,123,255,0.1), 0 8px 20px rgba(0,0,0,0.06)'
-                e.currentTarget.style.borderColor = 'rgba(0,123,255,0.15)'
+                e.currentTarget.style.boxShadow = '0 20px 60px rgba(8,169,232,0.1), 0 8px 20px rgba(0,0,0,0.06)'
+                e.currentTarget.style.borderColor = 'rgba(8,169,232,0.15)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.02)'
@@ -150,7 +150,7 @@ export default function Services() {
                   width: 52,
                   height: 52,
                   borderRadius: 16,
-                  background: 'rgba(0,123,255,0.06)',
+                  background: 'rgba(8,169,232,0.06)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -185,7 +185,7 @@ export default function Services() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: 14,
                   fontWeight: 600,
-                  color: '#007BFF',
+                  color: '#08A9E8',
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: 6,

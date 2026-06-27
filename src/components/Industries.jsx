@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion'
 
 const industries = [
-  { name: 'Automotive', desc: 'Precision components for passenger vehicles, commercial trucks and electric vehicles.' },
-  { name: 'Industrial', desc: 'Heavy machinery and industrial equipment components built to last.' },
-  { name: 'Heavy Engineering', desc: 'Large-scale engineering components for infrastructure and construction.' },
-  { name: 'Electrical', desc: 'Enclosures, busbars and precision electrical components.' },
-  { name: 'Renewable Energy', desc: 'Components for solar, wind and energy storage systems.' },
-  { name: 'OEM Manufacturing', desc: 'Original equipment manufacturing with full design-to-delivery capability.' },
+  { name: 'Power T&D', desc: 'Precision components for power transmission and distribution equipment, transformers and switchgear systems.' },
+  { name: 'Automotive', desc: 'High-quality stampings and castings for passenger vehicles, commercial trucks and automotive subsystems.' },
+  { name: 'General Engineering', desc: 'Custom manufacturing solutions for diverse general engineering applications and industrial equipment.' },
+  { name: 'Electrical', desc: 'Enclosures, busbars, fuse components and precision electrical parts for power systems.' },
+  { name: 'Industrial Machinery', desc: 'Heavy machinery components, fabricated parts and precision assemblies for industrial equipment.' },
+  { name: 'OEM Manufacturing', desc: 'Full-service original equipment manufacturing with design, prototyping, production and logistics support.' },
 ]
 
-const colors = ['rgba(0,123,255,0.08)', 'rgba(0,123,255,0.04)', 'rgba(0,123,255,0.06)', 'rgba(0,123,255,0.03)', 'rgba(0,123,255,0.07)', 'rgba(0,123,255,0.05)']
+const colors = ['rgba(8,169,232,0.08)', 'rgba(8,169,232,0.04)', 'rgba(8,169,232,0.06)', 'rgba(8,169,232,0.03)', 'rgba(8,169,232,0.07)', 'rgba(8,169,232,0.05)']
 
 export default function Industries() {
   return (
@@ -26,14 +26,14 @@ export default function Industries() {
             fontFamily: "'Inter', sans-serif",
             fontSize: 13,
             fontWeight: 600,
-            color: '#007BFF',
+            color: '#08A9E8',
             letterSpacing: 4,
             textTransform: 'uppercase',
             display: 'inline-block',
             padding: '6px 16px',
             borderRadius: 100,
-            border: '1px solid rgba(0,123,255,0.2)',
-            background: 'rgba(0,123,255,0.06)',
+            border: '1px solid rgba(8,169,232,0.2)',
+            background: 'rgba(8,169,232,0.06)',
             marginBottom: 16,
           }}>
             Industries We Serve
@@ -77,18 +77,18 @@ export default function Industries() {
                 borderRadius: 24,
                 padding: 40,
                 background: colors[i],
-                border: '1px solid rgba(0,123,255,0.08)',
+                border: '1px solid rgba(8,169,232,0.08)',
                 cursor: 'default',
                 transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(0,123,255,0.1)'
-                e.currentTarget.style.borderColor = 'rgba(0,123,255,0.2)'
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,123,255,0.08)'
+                e.currentTarget.style.background = 'rgba(8,169,232,0.1)'
+                e.currentTarget.style.borderColor = 'rgba(8,169,232,0.2)'
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(8,169,232,0.08)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = colors[i]
-                e.currentTarget.style.borderColor = 'rgba(0,123,255,0.08)'
+                e.currentTarget.style.borderColor = 'rgba(8,169,232,0.08)'
                 e.currentTarget.style.boxShadow = 'none'
               }}
             >
