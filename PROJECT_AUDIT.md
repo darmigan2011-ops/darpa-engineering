@@ -1,5 +1,7 @@
 # DARPA Engineering Website — Project Audit
 
+> Historical record: this document describes earlier implementations and measurements. It is not a current release report. See `RECOVERY_REPORT.md` for the October 11 redesign and its verified checks.
+
 - **Audit date:** 2026-10-04
 - **Scope:** Current working copy at `C:\Users\darmi\darpa-engineering`
 - **Status:** Audit and documentation only. The separate backup was not accessed; application files and existing build output were not changed.

@@ -1,92 +1,58 @@
+import shopSmall from '../assets/darpa-press-cell-800.webp'
+import shopLarge from '../assets/darpa-press-cell-1400.webp'
+
 export default function About() {
   return (
-    <section className="section company" id="company" aria-labelledby="company-heading">
+    <section
+      className="section company"
+      id="company"
+      aria-labelledby="company-heading"
+    >
       <div className="wrap company-layout">
-        <div data-reveal>
-          <p className="eyebrow eyebrow--light">About DARPA Engineering</p>
-          <h2 id="company-heading">Manufacturing work, rooted in Hosur.</h2>
+        <div className="company-copy">
+          <p className="eyebrow section-marker">03 / The company</p>
+          <h2 id="company-heading">
+            Engineering
+            <br />
+            from Hosur.
+          </h2>
+          <p>
+            DARPA Engineering began in 2011 in Hosur, Tamil Nadu. Our work
+            brings together sheet-metal stamping, non-ferrous casting and the
+            design and manufacture of their tools.
+          </p>
+          <p>
+            Having tooling alongside part manufacture means a component and the
+            tools behind it can be discussed with the same team.
+          </p>
+          <a className="text-link" href="#contact">
+            Meet us at the shop floor <span aria-hidden="true">↗</span>
+          </a>
+          <div className="company-location">
+            <span className="eyebrow">Find us</span>
+            <p>
+              42-A3, SIPCOT Industrial Complex
+              <br />
+              SIPCOT-1, Hosur, Tamil Nadu
+            </p>
+          </div>
         </div>
-        <div className="company-copy" data-reveal>
-          <p>
-            DARPA Engineering is based in the SIPCOT Industrial Complex in Hosur,
-            Tamil Nadu, with separate stamping, casting and tooling divisions.
-          </p>
-          <p>
-            With tooling alongside part manufacture, buyers can discuss a component
-            and its related tooling with the same manufacturer.
-          </p>
-          <p>
-            Started in 2011, DARPA Engineering also provides warehousing for international
-            clients. More than 80% of products are exported to the USA and Germany.
-          </p>
-          <p>
-            Product development and manufacturing follow Six Sigma principles, with
-            customer requirements and shorter lead times in view.
-          </p>
-          <p>
-            DARPA Engineering describes excellence as a mindset across every action
-            and department, with quality in every process and on-time delivery.
-          </p>
-          <a className="text-link text-link--light" href="#contact">Talk through a requirement <span aria-hidden="true">→</span></a>
-        </div>
+        <figure className="company-photograph">
+          <img
+            src={shopLarge}
+            srcSet={`${shopSmall} 800w, ${shopLarge} 1400w`}
+            sizes="(max-width: 760px) calc(100vw - 40px), 45vw"
+            alt="Press equipment inside DARPA Engineering’s Hosur shop floor"
+            width="1400"
+            height="1050"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>Where the work happens.</span>
+            <span>Hosur / Tamil Nadu</span>
+          </figcaption>
+        </figure>
       </div>
-
-      <div className="wrap company-at-glance" data-reveal>
-        <div className="company-at-glance-heading">
-          <p className="eyebrow eyebrow--light">Company at a glance</p>
-          <h3>Built around capable teams and dependable work.</h3>
-        </div>
-        <dl className="company-facts">
-          <div>
-            <dt>Established</dt>
-            <dd>2011</dd>
-            <p>Started in Hosur, Tamil Nadu</p>
-          </div>
-          <div>
-            <dt>Export share</dt>
-            <dd>&gt;80%</dd>
-            <p>Products exported to USA and Germany</p>
-          </div>
-          <div>
-            <dt>Certification</dt>
-            <dd>ISO</dd>
-            <p>9001:2015</p>
-          </div>
-          <div>
-            <dt>Core divisions</dt>
-            <dd>03</dd>
-            <p>Stampings · castings · tooling</p>
-          </div>
-        </dl>
-
-        <div className="company-quality-commitments">
-          <p className="eyebrow eyebrow--light">Quality commitments</p>
-          <ul>
-            <li>Customer satisfaction</li>
-            <li>Quality in every process</li>
-            <li>Continuous improvement</li>
-            <li>Employee training</li>
-            <li>Safe working environment</li>
-            <li>Delivery on time</li>
-            <li>Commitment to customers</li>
-          </ul>
-        </div>
-        <p className="company-quality-note">
-          Quality policy: employee training to enhance skills, reduce manufacturing cost and customer complaints, while maintaining quality systems.
-        </p>
-        <p className="company-client-note">International manufacturing clients · exports to USA and Germany</p>
-        <p className="official-source-note official-source-note--light">
-          <a href="https://darpaengi.com/" rel="noreferrer" target="_blank">Company philosophy · DARPA Engineering Home</a> ·{' '}
-          <a href="https://darpaengi.com/about/" rel="noreferrer" target="_blank">Company details and quality objectives</a>
-        </p>
-      </div>
-
-      <ol className="wrap production-sequence" aria-label="Engineering to delivery" data-reveal>
-        <li><span className="production-step-number">01</span><span className="production-step-title">Engineering</span></li>
-        <li><span className="production-step-number">02</span><span className="production-step-title">Manufacturing</span></li>
-        <li><span className="production-step-number">03</span><span className="production-step-title">Quality</span></li>
-        <li><span className="production-step-number">04</span><span className="production-step-title">Delivery</span></li>
-      </ol>
     </section>
   )
 }

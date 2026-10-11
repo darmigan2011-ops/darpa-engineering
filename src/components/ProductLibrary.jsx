@@ -49,40 +49,69 @@ const selectedParts = [
 
 export default function ProductLibrary() {
   return (
-    <section className="part-library" aria-labelledby="part-library-heading">
-      <div className="part-library-heading" data-reveal>
-        <div>
-          <p className="eyebrow">DARPA Engineering / selected parts</p>
-          <h4 id="part-library-heading">Named in the stamping gallery.</h4>
+    <section
+      className="section part-library"
+      id="products"
+      aria-labelledby="part-library-heading"
+    >
+      <div className="wrap">
+        <div className="part-library-heading" data-reveal>
+          <div>
+            <p className="eyebrow section-marker">02 / Selected components</p>
+            <h2 id="part-library-heading">
+              A few parts.
+              <br />A closer look.
+            </h2>
+          </div>
+          <p>
+            A selection from the company’s stamping gallery. Share a drawing or
+            sample to discuss your own component.
+          </p>
         </div>
-        <p>Product names follow the official DARPA Engineering Stampings gallery.</p>
-      </div>
 
-      <div className="part-library-grid" aria-label="Selected stamped products">
-        {selectedParts.map((part, index) => (
-          <figure className={`part-library-item part-library-item--${part.id}`} data-reveal key={part.id}>
-            <img
-              alt={`${part.name} product image from DARPA Engineering's official Stampings gallery`}
-              decoding="async"
-              height="800"
-              loading="lazy"
-              sizes={index === 0 ? '(max-width: 760px) calc(100vw - 40px), 46vw' : '(max-width: 480px) 100vw, (max-width: 760px) 42vw, 22vw'}
-              src={part.small}
-              srcSet={`${part.small} 400w, ${part.large} 800w`}
-              width="800"
-            />
-            <figcaption>
-              <span className="part-library-reference">{part.reference}</span>
-              <span className="part-library-name">{part.name}</span>
-              <span className="part-library-category">Stamped product</span>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
+        <div
+          className="part-library-grid"
+          aria-label="Selected stamped products"
+        >
+          {selectedParts.map((part, index) => (
+            <figure
+              className={`part-library-item part-library-item--${part.id}`}
+              data-reveal
+              key={part.id}
+            >
+              <img
+                alt={`${part.name} product image from DARPA Engineering's official Stampings gallery`}
+                decoding="async"
+                height="800"
+                loading="lazy"
+                sizes={
+                  index === 0
+                    ? '(max-width: 760px) calc(100vw - 40px), 46vw'
+                    : '(max-width: 480px) 100vw, (max-width: 760px) 42vw, 22vw'
+                }
+                src={part.small}
+                srcSet={`${part.small} 400w, ${part.large} 800w`}
+                width="800"
+              />
+              <figcaption>
+                <span className="part-library-reference">{part.reference}</span>
+                <span className="part-library-name">{part.name}</span>
+                <span className="part-library-category">Stamped product</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
 
-      <p className="official-source-note">
-        <a href="https://darpaengi.com/stampings/" rel="noreferrer" target="_blank">View the official DARPA Engineering Stampings gallery</a>
-      </p>
+        <p className="official-source-note">
+          <a
+            href="https://darpaengi.com/stampings/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            View the official DARPA Engineering Stampings gallery
+          </a>
+        </p>
+      </div>
     </section>
   )
 }

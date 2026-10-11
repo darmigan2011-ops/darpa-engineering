@@ -1,237 +1,187 @@
-import stampingPressSmall from '../assets/darpa-stamping-press-800.webp'
-import stampingPressLarge from '../assets/darpa-stamping-press-1600.webp'
-import stampingPressTiny from '../assets/darpa-stamping-press-400.webp'
-import castingFurnaceSmall from '../assets/darpa-casting-furnace-640.webp'
-import castingFurnaceLarge from '../assets/darpa-casting-furnace-1086.webp'
-import castingFurnaceTiny from '../assets/darpa-casting-furnace-400.webp'
-import stampedBracketSmall from '../assets/darpa-stamped-bracket-240.webp'
-import stampedBracketLarge from '../assets/darpa-stamped-bracket-413.webp'
-import hpsPressSmall from '../assets/darpa-hps-press-line-800.webp'
-import hpsPressLarge from '../assets/darpa-hps-press-line-1400.webp'
-import pressCellSmall from '../assets/darpa-press-cell-800.webp'
-import pressCellLarge from '../assets/darpa-press-cell-1400.webp'
-import springSeatImage from '../assets/darpa-product-spring-seat.webp'
-import topContactImage from '../assets/darpa-product-top-contact.webp'
-import CastingDetails from './CastingDetails'
-import ProductLibrary from './ProductLibrary'
-import RobotWelding from './RobotWelding'
+import { useRef, useState } from 'react'
+import stampingImage from '../assets/darpa-stamping-press-1600.webp'
+import castingImage from '../assets/darpa-casting-furnace-1086.webp'
 import StampingSequence from './StampingSequence'
+import CastingDetails from './CastingDetails'
 import ToolingDie from './ToolingDie'
+import RobotWelding from './RobotWelding'
+
+const divisions = [
+  {
+    id: 'stamping',
+    label: 'Stampings',
+    title: 'From sheet to component.',
+    description:
+      'Formed metal parts in steel, stainless steel, copper, brass, bronze and aluminium. In-house tool design supports the component from development through manufacture.',
+    image: stampingImage,
+    alt: 'Mechanical presses on the DARPA Engineering manufacturing floor',
+    facts: [
+      ['Materials', 'Steel, stainless steel & non-ferrous metals'],
+      ['Presses', 'Mechanical, hydraulic & pneumatic'],
+      ['Related work', 'In-house design & robotic welding'],
+    ],
+  },
+  {
+    id: 'casting',
+    label: 'Castings',
+    title: 'The alloy. The shape. The route.',
+    description:
+      'Non-ferrous components made through gravity die and shell or sand casting. The material and manufacturing route depend on your part’s requirements.',
+    image: castingImage,
+    alt: 'A furnace in DARPA Engineering’s casting division',
+    facts: [
+      ['Materials', 'Aluminium, copper, brass & bronze'],
+      ['Processes', 'Gravity die, shell & sand casting'],
+      ['Melt control', 'In-house spectrometer checks'],
+    ],
+  },
+  {
+    id: 'tooling',
+    label: 'Tooling',
+    title: 'Good parts start with the tool.',
+    description:
+      'Tools designed and manufactured in-house for stamping and non-ferrous casting. The tool room brings design, machining and finishing together.',
+    facts: [
+      ['Design', 'SolidWorks & AutoCAD'],
+      ['Machining', 'VMC, milling & EDM'],
+      ['Finishing', 'Surface grinding'],
+    ],
+  },
+]
 
 export default function Services() {
+  const [active, setActive] = useState(0)
+  const tabs = useRef([])
+  function moveTab(event, index) {
+    const destinations = {
+      ArrowRight: (index + 1) % 3,
+      ArrowLeft: (index + 2) % 3,
+      Home: 0,
+      End: 2,
+    }
+    if (!(event.key in destinations)) return
+    event.preventDefault()
+    const next = destinations[event.key]
+    setActive(next)
+    tabs.current[next]?.focus()
+  }
   return (
-    <section className="section capabilities" id="capabilities" aria-labelledby="capabilities-heading">
+    <section
+      className="section capabilities"
+      id="capabilities"
+      aria-labelledby="capabilities-heading"
+    >
       <div className="wrap">
-        <div className="section-heading section-heading--split" data-reveal>
+        <div className="section-heading section-heading--split">
           <div>
-            <p className="eyebrow">Manufacturing capabilities</p>
-            <h2 id="capabilities-heading">Three divisions.<br />Clear scope.</h2>
+            <p className="eyebrow section-marker">01 / What we make</p>
+            <h2 id="capabilities-heading">
+              Three divisions.
+              <br />
+              One manufacturing partner.
+            </h2>
           </div>
           <p>
-            Core work spans sheet-metal stamping, non-ferrous casting and the tooling
-            used for those processes.
+            Explore the processes behind the parts. Select a division to see its
+            materials, equipment and engineering details.
           </p>
         </div>
-
-        <div className="capability-list">
-          <article className="capability-feature capability-feature--stamping" data-reveal>
-            <div className="capability-copy">
-              <p className="eyebrow">01 / Stampings</p>
-              <h3>Stampings</h3>
-              <p>Sheet-metal stampings and in-house tool design for industrial parts.</p>
-              <a href="#contact">Discuss stamping needs <span aria-hidden="true">→</span></a>
-            </div>
-
-            <div className="capability-evidence">
-              <figure className="capability-photo capability-photo--press">
-                <img
-                  src={stampingPressTiny}
-                  srcSet={`${stampingPressTiny} 400w, ${stampingPressSmall} 800w, ${stampingPressLarge} 1600w`}
-                  sizes="(max-width: 760px) calc(100vw - 160px), 42vw"
-                  width="1600"
-                  height="739"
-                  alt="Row of mechanical presses on DARPA Engineering's manufacturing floor"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>Press line · Hosur</figcaption>
-              </figure>
-              <figure className="capability-photo capability-photo--part">
-                <img
-                  src={stampedBracketSmall}
-                  srcSet={`${stampedBracketSmall} 240w, ${stampedBracketLarge} 413w`}
-                  sizes="(max-width: 760px) 112px, 12vw"
-                  width="413"
-                  height="652"
-                  alt="Two stamped galvanized metal brackets shown side by side"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>Stamped bracket</figcaption>
-              </figure>
-            </div>
-          </article>
-
-          <div className="stamping-extension">
-            <div className="stamping-spec-sheet" data-reveal>
-              <div className="stamping-spec-heading">
-                <div>
-                  <p className="eyebrow">01 / Stamping capability</p>
-                  <h4>From coil to formed part.</h4>
-                </div>
-                <p>Design, engineering development, manufacture and supply, with in-house designers for complicated stampings.</p>
-              </div>
-
-              <dl className="stamping-spec-list">
-                <div>
-                  <dt>Press range</dt>
-                  <dd>10T — 250T</dd>
-                  <p>In-house mechanical, hydraulic and pneumatic presses</p>
-                </div>
-                <div>
-                  <dt>Materials</dt>
-                  <dd>Steel · stainless steel · copper · brass · bronze · aluminium</dd>
-                  <p>Steel grades: CR · HR · HSLA</p>
-                </div>
-                <div>
-                  <dt>Engineering</dt>
-                  <dd>SolidWorks · AutoCAD</dd>
-                  <p>Critical surface and solid-model design</p>
-                </div>
-                <div>
-                  <dt>Robot welding</dt>
-                  <dd>Panasonic robot</dd>
-                  <p>Special welding programs and weld attachments for complicated parts, penetration and torque performance</p>
-                </div>
-                <div>
-                  <dt>Feed + shearing</dt>
-                  <dd>Up to 1 t coil feed</dd>
-                  <p>Shearing listed up to 12 mm × 2500 mm</p>
-                </div>
-              </dl>
-
-              <details className="stamping-machine-schedule" data-reveal>
-                <summary>Press and fabrication equipment schedule</summary>
-                <dl className="stamping-machine-rows">
-                  <div>
-                    <dt>Mechanical presses</dt>
-                    <dd>45T · 70T · 80T · 120T with die cushion</dd>
-                  </div>
-                  <div>
-                    <dt>Hydraulic press</dt>
-                    <dd>150T</dd>
-                  </div>
-                  <div>
-                    <dt>Pneumatic power presses</dt>
-                    <dd>45T × 4 · 63T × 2 · 110T · 160T · 250T</dd>
-                  </div>
-                  <div>
-                    <dt>Welding equipment</dt>
-                    <dd>2 welding machines · Panasonic robot welding</dd>
-                  </div>
-                </dl>
-                <p className="stamping-schedule-note">
-                  Capacity/type information follows the About infrastructure table; pneumatic unit totals for 110T and 160T are omitted because official pages differ.
-                </p>
-              </details>
-
-              <p className="official-source-note">
-                Details from DARPA Engineering’s <a href="https://darpaengi.com/service/" rel="noreferrer" target="_blank">Service</a> and{' '}
-                <a href="https://darpaengi.com/about/" rel="noreferrer" target="_blank">About / infrastructure</a> pages.
-              </p>
-            </div>
-
-            <RobotWelding />
-
-            <div className="stamping-gallery" aria-label="Stamping equipment and components">
-              <figure className="stamping-gallery-press" data-reveal>
-                <img
-                  alt="HPS press line shown in DARPA Engineering's official company media"
-                  decoding="async"
-                  height="646"
-                  loading="lazy"
-                  sizes="(max-width: 760px) calc(100vw - 40px), 58vw"
-                  src={hpsPressSmall}
-                  srcSet={`${hpsPressSmall} 800w, ${hpsPressLarge} 1400w`}
-                  width="1400"
-                />
-                <figcaption><span>HPS press line</span><span>DARPA Engineering · factory floor</span></figcaption>
-              </figure>
-              <figure className="stamping-gallery-product" data-reveal>
-                <img
-                  alt="Spring seat component NFS 0058 shown in DARPA Engineering's official media"
-                  decoding="async"
-                  loading="lazy"
-                  src={springSeatImage}
-                />
-                <figcaption>Spring seat · NFS_0058</figcaption>
-              </figure>
-              <figure className="stamping-gallery-product" data-reveal>
-                <img
-                  alt="Top contact component NFS 0068 shown in DARPA Engineering's official media"
-                  decoding="async"
-                  loading="lazy"
-                  src={topContactImage}
-                />
-                <figcaption>Top contact · NFS_0068</figcaption>
-              </figure>
-              <figure className="stamping-gallery-floor" data-reveal>
-                <img
-                  alt="Several press machines on DARPA Engineering's shop floor in an official 2026 company photograph"
-                  decoding="async"
-                  height="1050"
-                  loading="lazy"
-                  sizes="(max-width: 760px) calc(100vw - 40px), 100vw"
-                  src={pressCellSmall}
-                  srcSet={`${pressCellSmall} 800w, ${pressCellLarge} 1400w`}
-                  width="1400"
-                />
-                <figcaption><span>Press shop floor</span><span>Official company media · 2026</span></figcaption>
-              </figure>
-            </div>
-
-            <ProductLibrary />
-            <StampingSequence />
-          </div>
-
-          <article className="capability-feature capability-feature--casting" data-reveal>
-            <figure className="capability-photo capability-photo--casting">
-              <img
-                src={castingFurnaceTiny}
-                srcSet={`${castingFurnaceTiny} 400w, ${castingFurnaceSmall} 640w, ${castingFurnaceLarge} 1086w`}
-                sizes="(max-width: 760px) calc(100vw - 40px), 40vw"
-                width="1086"
-                height="815"
-                alt="Casting furnace at DARPA Engineering's Hosur facility"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>Furnace · Casting division</figcaption>
-            </figure>
-
-            <div className="capability-copy">
-              <p className="eyebrow">02 / Castings</p>
-              <h3>Non-ferrous castings</h3>
-              <p>Castings in aluminium, copper, brass and bronze. Share the alloy and component requirements to discuss suitability.</p>
-              <a href="#contact">Discuss a casting <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <CastingDetails />
-
-          <article className="capability-tooling" data-reveal>
-            <div className="capability-tooling-title">
-              <span className="capability-number">03</span>
-              <h3>Tooling</h3>
-            </div>
-            <div className="capability-tooling-copy">
-              <p>In-house design and manufacture of tools for stamping and non-ferrous casting.</p>
-              <a href="#contact">Discuss tooling <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <ToolingDie />
+        <div
+          className="division-tabs"
+          role="tablist"
+          aria-label="Manufacturing divisions"
+        >
+          {divisions.map((item, index) => (
+            <button
+              key={item.id}
+              ref={(el) => {
+                tabs.current[index] = el
+              }}
+              type="button"
+              role="tab"
+              id={`division-${item.id}`}
+              aria-selected={active === index}
+              aria-controls={`panel-${item.id}`}
+              tabIndex={active === index ? 0 : -1}
+              onClick={() => setActive(index)}
+              onKeyDown={(event) => moveTab(event, index)}
+            >
+              <span className="division-number">0{index + 1}</span>
+              <span>{item.label}</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          ))}
         </div>
+        {divisions.map((division, index) => (
+          <div
+            key={division.id}
+            className="division-panel"
+            role="tabpanel"
+            id={`panel-${division.id}`}
+            aria-labelledby={`division-${division.id}`}
+            tabIndex={0}
+            hidden={active !== index}
+          >
+            <div
+              className={`division-overview${division.image ? '' : ' division-overview--tooling'}`}
+            >
+              {division.image && (
+                <figure className="division-photo">
+                  <img
+                    src={division.image}
+                    alt={division.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption>
+                    {division.label} division · Company photography
+                  </figcaption>
+                </figure>
+              )}
+              <div className="division-copy">
+                <p className="eyebrow">DARPA / {division.label}</p>
+                <h3>{division.title}</h3>
+                <p>{division.description}</p>
+                <dl className="division-facts">
+                  {division.facts.map(([label, value]) => (
+                    <div key={label}>
+                      <dt>{label}</dt>
+                      <dd>{value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <a className="text-link" href="#contact">
+                  Discuss your {division.label.toLowerCase()} requirement{' '}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+            {index === 0 && (
+              <>
+                <StampingSequence />
+                <details className="technical-disclosure">
+                  <summary>
+                    Robotic welding support <span aria-hidden="true">+</span>
+                  </summary>
+                  <RobotWelding />
+                </details>
+              </>
+            )}
+            {index === 1 && <CastingDetails />}
+            {index === 2 && <ToolingDie />}
+          </div>
+        ))}
+        <p className="capability-source">
+          Capability details follow the company’s{' '}
+          <a
+            href="https://darpaengi.com/service/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            published service information ↗
+          </a>
+          . Discuss suitability with the team for your specific component.
+        </p>
       </div>
     </section>
   )

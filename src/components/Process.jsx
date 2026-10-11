@@ -36,7 +36,7 @@ export default function Process() {
     <section className="section manufacturing-process" id="process" aria-labelledby="process-heading">
       <div className="wrap process-layout">
         <div className="process-intro" data-reveal>
-          <p className="eyebrow">Manufacturing workflow</p>
+          <p className="eyebrow section-marker">04 / Working together</p>
           <h2 id="process-heading">From enquiry<br />to delivery.</h2>
           <p>The part and its requirements guide the route through the work.</p>
         </div>
